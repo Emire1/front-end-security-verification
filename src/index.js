@@ -1,12 +1,8 @@
-//import "./styles.css";
-
 let draggableImageInner = document.getElementById("draggable-image");
-let draggableImageZone = document.getElementById("draggable-image-zone");
 let mainImage = document.getElementById("main-image");
 let mainImageBits = mainImage.getElementsByTagName("*");
 let result = document.getElementById("result");
 let arrayOfMainImageBits = [];
-let matches = 3;
 
 function reset() {
   var randomElement =
@@ -55,14 +51,6 @@ function initiate() {
   draggableImageInner.appendChild(randomElementClone);
 }
 
-function removeFirstChild() {
-  for (const bits of mainImageBits) {
-    if (bits.firstChild) {
-      bits.removeChild(bits.firstChild);
-    }
-  }
-}
-
 for (const bits of mainImageBits) {
   bits.addEventListener("dragover", dragOver);
   bits.addEventListener("dragenter", dragEnter);
@@ -95,24 +83,11 @@ function dragLeave() {
 }
 
 function drop(evnt) {
-  //console.log(draggableImage.attributes[0].name);
-  //console.log(evnt.target.attributes[0].name);
-  //removeFirstChild();
   if (draggableImage.attributes[0].name === evnt.target.attributes[0].name) {
     result.innerText = "Congratulation! you matched it";
   } else {
-    //console.log(draggableImage);
-    // matches--;
-    // if (matches > 0) {
-    //     result.innerText = `Not a match! you have ${matches} more attempts left`;
-    //     // removeFirstChild();
-    //     reset();
-    //     //console.log(matches);
-    // } else {
-    //     result.innerText = `you have ${matches} attempts and it is over`;
-    //     // removeFirstChild();
     result.innerText = "Sorry you didn't match it";
-    draggableImageInner.innerHTML = "Bye!";
+    draggableImageInner.innerHTML = `<button onClick="window.location.reload()"}> retry <\button>`;
     // }
   }
 }
