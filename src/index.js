@@ -1,4 +1,3 @@
-//import "./styles.css";
 
 let draggableImageInner = document.getElementById("draggable-image");
 let draggableImageZone = document.getElementById("draggable-image-zone");
