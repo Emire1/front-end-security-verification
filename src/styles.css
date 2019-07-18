@@ -1,0 +1,111 @@
+#draggable-pic:hover {
+  cursor: pointer;
+}
+
+.held {
+  cursor: grab;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.hovered {
+  border: 10px dotted black;
+}
+
+.invisible {
+  display: none;
+}
+.image {
+  height: 100vh;
+  width: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image > div {
+  width: 20%;
+  height: 20%;
+  background: red;
+  box-sizing: border-box;
+  background: url("https://source.unsplash.com/random/1000x1000") no-repeat;
+  /*background: url(http://lorempixel.com/600/600/nature/1/) no-repeat;*/
+  background-size: 500%;
+}
+
+.image > div[data-image-piece1] {
+  background-position: 0% 0%;
+}
+.image > div[data-image-piece2] {
+  background-position: 25% 0%;
+}
+.image > div[data-image-piece3] {
+  background-position: 50% 0%;
+}
+.image > div[data-image-piece4] {
+  background-position: 75% 0%;
+}
+.image > div[data-image-piece5] {
+  background-position: 100% 0%;
+}
+.image > div[data-image-piece6] {
+  background-position: 0% 25%;
+}
+.image > div[data-image-piece7] {
+  background-position: 25% 25%;
+}
+.image > div[data-image-piece8] {
+  background-position: 50% 25%;
+}
+.image > div[data-image-piece9] {
+  background-position: 75% 25%;
+}
+.image > div[data-image-piece10] {
+  background-position: 100% 25%;
+}
+.image > div[data-image-piece11] {
+  background-position: 0% 50%;
+}
+.image > div[data-image-piece12] {
+  background-position: 25% 50%;
+}
+.image > div[data-image-piece13] {
+  background-position: 50% 50%;
+}
+.image > div[data-image-piece14] {
+  background-position: 75% 50%;
+}
+.image > div[data-image-piece15] {
+  background-position: 100% 50%;
+}
+.image > div[data-image-piece16] {
+  background-position: 0% 75%;
+}
+.image > div[data-image-piece17] {
+  background-position: 25% 75%;
+}
+.image > div[data-image-piece18] {
+  background-position: 50% 75%;
+}
+.image > div[data-image-piece19] {
+  background-position: 75% 75%;
+}
+.image > div[data-image-piece20] {
+  background-position: 100% 75%;
+}
+.image > div[data-image-piece21] {
+  background-position: 0% 100%;
+}
+.image > div[data-image-piece22] {
+  background-position: 25% 100%;
+}
+.image > div[data-image-piece23] {
+  background-position: 50% 100%;
+}
+.image > div[data-image-piece24] {
+  background-position: 75% 100%;
+}
+.image > div[data-image-piece25] {
+  background-position: 100% 100%;
+}
