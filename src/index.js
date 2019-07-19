@@ -25,6 +25,7 @@ function dragEnter(evnt) {
 }
 
 function dragLeave() {
+  this.preventDefault();
 }
 
 function drop(evnt) {
@@ -33,7 +34,7 @@ function drop(evnt) {
     this.append(draggableImage);
   } else {
     result.innerText = "Sorry you didn't match it";
-    draggableImageInner.innerHTML = "click on the reload button to try again";
+    draggableImageInner.innerHTML = "click on the reload button to try again.";
     reloadButton.style.visibility = "visible";
   }
 }
