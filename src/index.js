@@ -25,15 +25,16 @@ function dragEnter(evnt) {
 }
 
 function dragLeave() {
-  //this.append(draggableImage);
+  this.preventDefault();
 }
 
 function drop(evnt) {
   if (draggableImage.attributes[0].name === evnt.target.attributes[0].name) {
     result.innerText = "Congratulation! you matched it";
+    this.append(draggableImage);
   } else {
     result.innerText = "Sorry you didn't match it";
-    draggableImageInner.innerHTML = "Bye!";
+    draggableImageInner.innerHTML = "click on the reload button to try again.";
     reloadButton.style.visibility = "visible";
   }
 }
